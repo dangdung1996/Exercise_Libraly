@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Laibrary</title>
+</head>
+<body>
+<script>
+    let english = ['hi', 'bye', 'man', 'woman']
+    let vns = ['xin chào', 'tạm biệt', 'đàn ông', 'phụ nữ']
+
+    function transEng() {
+        let wordeng = prompt('Enter keywords');
+        let index = -1;
+        for (let i = 0; i < english.length; i++) {
+            if (english[i] === wordeng) {
+                index = i;
+            }
+        }
+        if (index === -1) {
+            alert('Not found');
+        } else {
+            alert(vns[index]);
+        }
+    }
+    function transVns(){
+        let wordvns = prompt('Nhập từ khóa');
+        let index = -1;
+        for(let j = 0; j < vns.length;j++){
+            if(vns[j] === wordvns)   {
+                index = j;
+            }
+        }
+        if (index===-1){
+            alert('Không tìm thấy');
+        }else{
+            alert(english[index]);
+        }
+    }
+    transEng();
+    transVns();
+</script>
+</body>
+</html>
